@@ -1,41 +1,48 @@
-# Yayo
+# Yano
+This is a ruby port of yn by sindresorhus
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yayo`. To experiment with that code, run `bin/console` for an interactive prompt.
+> Parse yes/no like values
 
-TODO: Delete this and the text above, and describe your gem
+Useful for validating answers to a CLI prompt.
 
-## Installation
+-
 
-Add this line to your application's Gemfile:
+The following case-insensitive values are recognized:
 
 ```ruby
-gem 'yayo'
+'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0
 ```
 
-And then execute:
+## Install
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install yayo
+```ruby
+$ gem install yano
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Yano.parse('y');
+#=> true
 
-## Development
+Yano.parse('NO');
+#=> false
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Yano.parse(true);
+#=> true
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Yano.parse('abomasum');
+#=> nil
 
-## Contributing
+# lenient mode will use a key distance-based score
+# to leniently accept typos of "yes" and "no"
+Yano.parse('mo', lenient: true);
+#=> false
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yayo.
+Unrecognized values return `nil`
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
