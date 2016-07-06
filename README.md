@@ -13,11 +13,21 @@ The following case-insensitive values are recognized:
 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0
 ```
 
-## Install
+## Installation
+
+Add this line to your application's Gemfile:
 
 ```ruby
-$ gem install yano
+gem 'yano'
 ```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install memoist_redux
 
 ## Usage
 
