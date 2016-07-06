@@ -77,8 +77,8 @@ module Yano
     end
 
     def self.check_lenient_values(val)
-      return true if get_yes_match_score(val) >= YES_MATCH_SCORE_THRESHOLD
-      return true if get_no_match_score(val)  >= NO_MATCH_SCORE_THRESHOLD
+      return true  if get_yes_match_score(val) >= YES_MATCH_SCORE_THRESHOLD
+      return false if get_no_match_score(val)  >= NO_MATCH_SCORE_THRESHOLD
     end
   end
 end

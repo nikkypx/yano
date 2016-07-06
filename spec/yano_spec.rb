@@ -50,8 +50,8 @@ RSpec.describe Yano do
   end
 
   it "correctly identifies falsey lenient values" do
-    expect(Yano.parse('ni', lenient: true)).to eq(true)
-    expect(Yano.parse('bi', lenient: true)).to eq(true)
-    expect(Yano.parse('mo', lenient: true)).to eq(true)
+    expect(Yano.parse('ni', lenient: true)).to eq(false)
+    expect(Yano.parse('bi', lenient: true)).to eq(false)
+    expect(Yano.parse('mo', lenient: true)).to eq(false)
   end
 end
