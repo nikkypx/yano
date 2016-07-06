@@ -1,4 +1,4 @@
-module Yayo
+module Yano
   module Lenient
     YES_MATCH_SCORE_THRESHOLD = 2
     NO_MATCH_SCORE_THRESHOLD  = 1.25
