@@ -61,9 +61,9 @@ module Yano
     def self.get_yes_match_score(val)
       y, e, s = val[0], val[1], val[2]
       [].tap do |score|
-        score << (Y_MATCH.key?(y) ? Y_MATCH[y] : 0)
-        score << (E_MATCH.key?(e) ? E_MATCH[e] : 0)
-        score << (S_MATCH.key?(s) ? S_MATCH[s] : 0)
+        score << Y_MATCH[y].to_f
+        score << E_MATCH[e].to_f
+        score << S_MATCH[s].to_f
       end.reduce(:+)
     end
 
@@ -71,8 +71,8 @@ module Yano
       n, o = val[0], val[1]
 
       [].tap do |score|
-        score << (N_MATCH.key?(n) ? N_MATCH[n] : 0)
-        score << (O_MATCH.key?(o) ? O_MATCH[o] : 0)
+        score << N_MATCH[n].to_f
+        score << O_MATCH[o].to_f
       end.reduce(:+)
     end
 
