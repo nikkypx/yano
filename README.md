@@ -1,5 +1,5 @@
 # Yano
-This is a ruby port of yn by sindresorhus
+**This is a ruby port of [yn](https://github.com/sindresorhus/yn) by [sindresorhus](https://github.com/sindresorhus)**
 
 > Parse yes/no like values
 
