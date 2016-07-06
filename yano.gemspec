@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nick Palaniuk"]
   spec.email         = ["npalaniuk@gmail.com"]
 
-  spec.summary       = %q{Parse yes/no values, useful for CLI prompts}
-  spec.description   = %q{Parse yes/no values}
+  spec.summary       = %q{Parse yes/no like values, useful for CLI prompts}
+  spec.description   = %q{Parse yes/no like values}
   spec.homepage      = "https://github.com/nikkypx/yano"
   spec.license       = "MIT"
 
