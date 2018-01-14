@@ -13,7 +13,7 @@ RSpec.describe Yano do
     true,
     '1',
     1
-  ];
+  ]
 
   FALSEY_CASES = [
     'n',
@@ -27,29 +27,29 @@ RSpec.describe Yano do
     false,
     '0',
     0
-  ];
+  ]
 
-  it "recognizes a truthy value" do
+  it 'recognizes a truthy value' do
     TRUTHY_CASES.each do |val|
       expect(Yano.parse(val)).to be(true)
     end
   end
 
-  it "recognizes a falsey value" do
+  it 'recognizes a falsey value' do
     FALSEY_CASES.each do |val|
       expect(Yano.parse(val)).to be(false)
     end
   end
 
-  it "correctly identifies truthy lenient values" do
-    expect(Yano.parse("ues", lenient: true)).to eq(true)
+  it 'correctly identifies truthy lenient values' do
+    expect(Yano.parse('ues', lenient: true)).to eq(true)
     expect(Yano.parse('ywa', lenient: true)).to eq(true)
     expect(Yano.parse('tes', lenient: true)).to eq(true)
     expect(Yano.parse('twa', lenient: true)).to eq(true)
     expect(Yano.parse('urd', lenient: true)).to eq(true)
   end
 
-  it "correctly identifies falsey lenient values" do
+  it 'correctly identifies falsey lenient values' do
     expect(Yano.parse('ni', lenient: true)).to eq(false)
     expect(Yano.parse('bi', lenient: true)).to eq(false)
     expect(Yano.parse('mo', lenient: true)).to eq(false)

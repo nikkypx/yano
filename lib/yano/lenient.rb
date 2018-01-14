@@ -13,7 +13,7 @@ module Yano
       'g' => 0.25,
       'h' => 0.25,
       'k' => 0.25
-    }
+    }.freeze
 
     E_MATCH = {
       '2' => 0.25,
@@ -25,7 +25,7 @@ module Yano
       's' => 0.25,
       'd' => 0.25,
       'f' => 0.25
-    }
+    }.freeze
 
     S_MATCH = {
       'q' => 0.25,
@@ -37,7 +37,7 @@ module Yano
       'z' => 0.25,
       'x' => 0.25,
       'c' => 0.25
-    }
+    }.freeze
 
     N_MATCH = {
       'h' => 0.25,
@@ -46,7 +46,7 @@ module Yano
       'b' => 0.75,
       'n' => 1,
       'm' => 0.75
-    }
+    }.freeze
 
     O_MATCH = {
       '9' => 0.25,
@@ -56,7 +56,7 @@ module Yano
       'p' => 0.75,
       'k' => 0.25,
       'l' => 0.25
-    }
+    }.freeze
 
     def self.get_yes_match_score(val)
       y, e, s = val[0], val[1], val[2]
