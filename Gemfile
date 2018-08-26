@@ -6,6 +6,7 @@ gem 'rake'
 
 group :test do
   gem 'rspec'
+  gem 'rubocop'
 end
 
 gemspec
