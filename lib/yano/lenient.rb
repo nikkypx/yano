@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Yano
   module Lenient
     YES_MATCH_SCORE_THRESHOLD = 2
@@ -59,7 +61,9 @@ module Yano
     }.freeze
 
     def self.get_yes_match_score(val)
-      y, e, s = val[0], val[1], val[2]
+      y = val[0]
+      e = val[1]
+      s = val[2]
       [].tap do |score|
         score << Y_MATCH[y].to_f
         score << E_MATCH[e].to_f
@@ -68,7 +72,8 @@ module Yano
     end
 
     def self.get_no_match_score(val)
-      n, o = val[0], val[1]
+      n = val[0]
+      o = val[1]
 
       [].tap do |score|
         score << N_MATCH[n].to_f

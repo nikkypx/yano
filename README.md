@@ -1,4 +1,7 @@
 # Yano
+
+[![Build Status](https://travis-ci.org/nikkypx/yano.svg?branch=master)](https://travis-ci.org/nikkypx/yano)
+
 **This is a ruby port of [yn](https://github.com/sindresorhus/yn) by [sindresorhus](https://github.com/sindresorhus)**
 
 > Parse yes/no like values

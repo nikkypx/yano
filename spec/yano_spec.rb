@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe Yano do
@@ -13,7 +15,7 @@ RSpec.describe Yano do
     true,
     '1',
     1
-  ]
+  ].freeze
 
   FALSEY_CASES = [
     'n',
@@ -27,7 +29,7 @@ RSpec.describe Yano do
     false,
     '0',
     0
-  ]
+  ].freeze
 
   it 'recognizes a truthy value' do
     TRUTHY_CASES.each do |val|
