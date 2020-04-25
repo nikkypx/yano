@@ -13,7 +13,7 @@ Useful for validating answers to a CLI prompt.
 The following case-insensitive values are recognized:
 
 ```ruby
-'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0
+'y', 'yes', 'true', true, '1', 1, 'on', 'n', 'no', 'false', false, '0', 0, 'off'
 ```
 
 ## Installation

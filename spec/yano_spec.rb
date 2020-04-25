@@ -14,7 +14,10 @@ RSpec.describe Yano do
     'True',
     true,
     '1',
-    1
+    1,
+    'on',
+    'On',
+    'ON'
   ].freeze
 
   FALSEY_CASES = [
@@ -28,7 +31,10 @@ RSpec.describe Yano do
     'False',
     false,
     '0',
-    0
+    0,
+    'off',
+    'Off',
+    'OFF'
   ].freeze
 
   it 'recognizes a truthy value' do
