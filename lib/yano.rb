@@ -4,8 +4,8 @@ require 'yano/version'
 require 'yano/lenient'
 
 module Yano
-  VALID_YES_VALUE = /^(y|yes|true|1)$/i
-  VALID_NO_VALUE  = /^(n|no|false|0)$/i
+  VALID_YES_VALUE = /^(y|yes|true|1)$/i.freeze
+  VALID_NO_VALUE  = /^(n|no|false|0)$/i.freeze
 
   def self.parse(val, opts = {})
     val = val.to_s.strip
