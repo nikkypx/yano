@@ -8,8 +8,6 @@
 
 Useful for validating answers to a CLI prompt.
 
--
-
 The following case-insensitive values are recognized:
 
 ```ruby
