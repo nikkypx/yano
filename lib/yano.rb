@@ -11,6 +11,7 @@ module Yano
     val = val.to_s.strip
     return true  if val =~ VALID_YES_VALUE
     return false if val =~ VALID_NO_VALUE
-    return Lenient.check_lenient_values(val) if opts.delete(:lenient)
+
+    Lenient.check_lenient_values(val) if opts.delete(:lenient)
   end
 end
