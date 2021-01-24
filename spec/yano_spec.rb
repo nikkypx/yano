@@ -2,41 +2,41 @@
 
 require 'spec_helper'
 
+TRUTHY_CASES = [
+  'y',
+  'Y',
+  'yes',
+  'YES',
+  'Yes',
+  'true',
+  'TRUE',
+  'True',
+  true,
+  '1',
+  1,
+  'on',
+  'On',
+  'ON'
+].freeze
+
+FALSEY_CASES = [
+  'n',
+  'N',
+  'no',
+  'NO',
+  'No',
+  'false',
+  'FALSE',
+  'False',
+  false,
+  '0',
+  0,
+  'off',
+  'Off',
+  'OFF'
+].freeze
+
 RSpec.describe Yano do
-  TRUTHY_CASES = [
-    'y',
-    'Y',
-    'yes',
-    'YES',
-    'Yes',
-    'true',
-    'TRUE',
-    'True',
-    true,
-    '1',
-    1,
-    'on',
-    'On',
-    'ON'
-  ].freeze
-
-  FALSEY_CASES = [
-    'n',
-    'N',
-    'no',
-    'NO',
-    'No',
-    'false',
-    'FALSE',
-    'False',
-    false,
-    '0',
-    0,
-    'off',
-    'Off',
-    'OFF'
-  ].freeze
-
   context 'when valid input' do
     it 'recognizes a truthy value' do
       TRUTHY_CASES.each do |val|
