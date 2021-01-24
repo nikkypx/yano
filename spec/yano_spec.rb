@@ -37,29 +37,37 @@ RSpec.describe Yano do
     'OFF'
   ].freeze
 
-  it 'recognizes a truthy value' do
-    TRUTHY_CASES.each do |val|
-      expect(Yano.parse(val)).to be(true)
+  context 'when valid input' do
+    it 'recognizes a truthy value' do
+      TRUTHY_CASES.each do |val|
+        expect(Yano.parse(val)).to be(true)
+      end
+    end
+
+    it 'recognizes a falsey value' do
+      FALSEY_CASES.each do |val|
+        expect(Yano.parse(val)).to be(false)
+      end
+    end
+
+    it 'correctly identifies truthy lenient values' do
+      expect(Yano.parse('ues', lenient: true)).to eq(true)
+      expect(Yano.parse('ywa', lenient: true)).to eq(true)
+      expect(Yano.parse('tes', lenient: true)).to eq(true)
+      expect(Yano.parse('twa', lenient: true)).to eq(true)
+      expect(Yano.parse('urd', lenient: true)).to eq(true)
+    end
+
+    it 'correctly identifies falsey lenient values' do
+      expect(Yano.parse('ni', lenient: true)).to eq(false)
+      expect(Yano.parse('bi', lenient: true)).to eq(false)
+      expect(Yano.parse('mo', lenient: true)).to eq(false)
     end
   end
 
-  it 'recognizes a falsey value' do
-    FALSEY_CASES.each do |val|
-      expect(Yano.parse(val)).to be(false)
+  context 'when invalid input' do
+    it 'raises nil' do
+      expect(Yano.parse(3)).to be_nil
     end
-  end
-
-  it 'correctly identifies truthy lenient values' do
-    expect(Yano.parse('ues', lenient: true)).to eq(true)
-    expect(Yano.parse('ywa', lenient: true)).to eq(true)
-    expect(Yano.parse('tes', lenient: true)).to eq(true)
-    expect(Yano.parse('twa', lenient: true)).to eq(true)
-    expect(Yano.parse('urd', lenient: true)).to eq(true)
-  end
-
-  it 'correctly identifies falsey lenient values' do
-    expect(Yano.parse('ni', lenient: true)).to eq(false)
-    expect(Yano.parse('bi', lenient: true)).to eq(false)
-    expect(Yano.parse('mo', lenient: true)).to eq(false)
   end
 end
